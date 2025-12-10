@@ -1,0 +1,155 @@
+/* =======================
+     THEME COLOR
+   ======================= */
+:root {
+    --bg-main: #000;
+    --bg-card: #0d0d0d;
+    --text-main: #fff;
+    --gold: #d4af37;
+    --gold-soft: #b8952b;
+    --gold-glow: rgba(212,175,55,0.5);
+}
+
+/* Tema terang (Gold-Light Mode) */
+.light-mode {
+    --bg-main: #fffbea;
+    --bg-card: #fff4d2;
+    --text-main: #2c2c2c;
+    --gold: #a17400;
+    --gold-soft: #7f5c00;
+}
+
+/* =======================
+     GLOBAL
+   ======================= */
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    transition: 0.3s ease-in-out;
+}
+
+/* =======================
+     NAVBAR
+   ======================= */
+header.nav {
+    background: var(--bg-card);
+    border-bottom: 2px solid var(--gold);
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* Logo */
+.logo-gold svg text {
+    filter: drop-shadow(0 0 5px var(--gold-glow));
+}
+
+/* Menu link */
+header.nav nav a {
+    color: var(--text-main);
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+header.nav nav a:hover {
+    color: var(--gold);
+    text-shadow: 0 0 8px var(--gold);
+}
+
+/* =======================
+     THEME SWITCH BUTTON
+   ======================= */
+.btn-theme {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-theme:hover {
+    background: var(--gold);
+    color: #000;
+    box-shadow: 0 0 10px var(--gold);
+}
+
+/* =======================
+     CARD
+   ======================= */
+.card {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--gold-soft);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px var(--gold-glow);
+}
+
+/* =======================
+     TABLE
+   ======================= */
+table {
+    background: var(--bg-card);
+    border: 1px solid var(--gold-soft);
+    color: var(--text-main);
+}
+table thead {
+    background: var(--gold);
+    color: black;
+}
+table td, th {
+    border-color: var(--gold-soft) !important;
+}
+
+/* Baris tabel hover */
+table tbody tr:hover {
+    background: #1a1a1a;
+    color: var(--gold);
+}
+
+/* =======================
+     BUTTON
+   ======================= */
+button, .btn {
+    background: var(--gold);
+    color: #000;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+button:hover, .btn:hover {
+    background: var(--gold-soft);
+    box-shadow: 0 0 12px var(--gold);
+}
+
+/* =======================
+     INPUT / FORM
+   ======================= */
+input, textarea, select {
+    background: #111;
+    border: 1px solid var(--gold-soft);
+    color: var(--text-main);
+    padding: 8px;
+    border-radius: 6px;
+}
+input:focus, textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 8px var(--gold-glow);
+}
+
+/* =======================
+     FOOTER
+   ======================= */
+footer.footer {
+    background: var(--bg-card);
+    border-top: 1px solid var(--gold);
+    padding: 15px;
+    text-align: center;
+    color: var(--gold);
+    box-shadow: 0 -2px 15px var(--gold-glow);
+}
